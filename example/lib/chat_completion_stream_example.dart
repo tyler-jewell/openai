@@ -21,7 +21,6 @@ void main() {
     messages: [
       userMessage,
     ],
-    toolChoice: "none",
     seed: 423,
     n: 2,
   );
