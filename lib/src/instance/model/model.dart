@@ -1,12 +1,12 @@
 import 'package:dart_openai/src/core/base/model/base.dart';
 import 'package:dart_openai/src/core/models/model/model.dart';
 import 'package:dart_openai/src/core/utils/logger.dart';
+import 'package:http/http.dart' as http;
+import 'package:meta/meta.dart';
+
 import '../../core/builder/base_api_url.dart';
 import '../../core/constants/strings.dart';
 import '../../core/networking/client.dart';
-import 'package:meta/meta.dart';
-
-import 'package:http/http.dart' as http;
 
 /// {@template openai_model}
 /// The class that handles all the requests related to the models in the OpenAI API.
@@ -53,7 +53,7 @@ interface class OpenAIModel implements OpenAIModelBase {
   ///
   /// Example:
   /// ```dart
-  /// OpenAIModelModel model = await OpenAI.instance.model.retrieve("text-davinci-003");
+  /// OpenAIModelModel model = await OpenAI.instance.model.retrieve("gpt-3.5-turbo-instruct");
   /// print(model.id)
   /// ```
   @override

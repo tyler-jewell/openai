@@ -14,7 +14,7 @@ Future<void> main() async {
     accumulativeSentence += word;
 
     final completion = await OpenAI.instance.completion.create(
-      model: "text-davinci-003",
+      model: "gpt-3.5-turbo-instruct",
       prompt: accumulativeSentence,
       maxTokens: 5,
     );

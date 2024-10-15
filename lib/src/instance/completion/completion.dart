@@ -1,13 +1,12 @@
 import 'package:dart_openai/src/core/builder/base_api_url.dart';
 import 'package:dart_openai/src/core/constants/strings.dart';
+import 'package:dart_openai/src/core/models/completion/completion.dart';
 import 'package:dart_openai/src/core/networking/client.dart';
 import 'package:dart_openai/src/core/utils/logger.dart';
-import 'package:dart_openai/src/core/models/completion/completion.dart';
+import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
 import '../../core/base/completion.dart';
-
-import 'package:http/http.dart' as http;
 
 /// {@template openai_completion}
 /// This class is responsible for handling all the requests related to the completion in the OpenAI API such as creating a completion.
@@ -81,7 +80,7 @@ interface class OpenAICompletion implements OpenAICompletionBase {
   /// Example:
   /// ```dart
   /// OpenAICompletionModel completion = await OpenAI.instance.completion.create(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Dart is a progr",
   ///  maxTokens: 20,
   ///  temperature: 0.5,
@@ -202,7 +201,7 @@ interface class OpenAICompletion implements OpenAICompletionBase {
   /// Example:
   /// ```dart
   /// Stream<OpenAIStreamCompletionModel> completionStream = OpenAI.instance.completion.createStream(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Github is ",
   ///  maxTokens: 100,
   ///  temperature: 0.5,
@@ -320,14 +319,14 @@ interface class OpenAICompletion implements OpenAICompletionBase {
   /// Example:
   /// ```dart
   /// OpenAICompletionModel completion = await OpenAI.instance.completion.create(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Dart is ",
   /// );
   /// ```
   /// Example:
   /// ```dart
   /// Stream<String> completionStream = OpenAI.instance.completion.createStreamText(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Dart is ",
   /// );
   /// ```
