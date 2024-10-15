@@ -2,8 +2,9 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 import 'dart:developer' as dev;
+import 'dart:io';
+
 import 'package:collection/collection.dart';
 import 'package:dart_openai/dart_openai.dart';
 import 'package:dart_openai/src/core/builder/headers.dart';
@@ -348,10 +349,14 @@ void main() async {
       chatStream.listen(
         (streamEvent) {
           expect(streamEvent, isA<OpenAIStreamChatCompletionModel>());
-          expect(streamEvent.choices.first.delta.content,
-              isA<List<OpenAIChatCompletionChoiceMessageContentItemModel>?>());
-          expect(streamEvent.choices.first.delta.content?.first?.text,
-              isA<String?>());
+          expect(
+            streamEvent.choices.first.delta.content,
+            isA<List<OpenAIChatCompletionChoiceMessageContentItemModel>?>(),
+          );
+          expect(
+            streamEvent.choices.first.delta.content?.first?.text,
+            isA<String?>(),
+          );
         },
         onDone: () {
           completer.complete(true);

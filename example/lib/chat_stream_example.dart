@@ -6,7 +6,7 @@ void main() async {
   OpenAI.apiKey = Env.apiKey;
 
   final chatStream = OpenAI.instance.chat.createStream(
-    model: "gpt-3.5-turbfqfqo",
+    model: "gpt-3.5-turbo",
     messages: [
       OpenAIChatCompletionChoiceMessageModel(
         content: [

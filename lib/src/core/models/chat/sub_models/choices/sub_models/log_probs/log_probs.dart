@@ -2,11 +2,11 @@
 import 'sub_models/content.dart';
 
 class OpenAIChatCompletionChoiceLogProbsModel {
+  final List<OpenAIChatCompletionChoiceLogProbsContentModel> content;
+
   OpenAIChatCompletionChoiceLogProbsModel({
     required this.content,
   });
-
-  final List<OpenAIChatCompletionChoiceLogProbsContentModel> content;
 
   factory OpenAIChatCompletionChoiceLogProbsModel.fromMap(
     Map<String, dynamic> json,
