@@ -35,7 +35,7 @@ Future<void> main() async {
   );
 
   final chatRes1 = await OpenAI.instance.chat.create(
-    model: "gpt-3.5-turbo-0613",
+    model: "gpt-3.5-turbo",
     messages: [userMsg],
     tools: [
       OpenAIToolModel(type: "function", function: function),
@@ -70,7 +70,7 @@ Future<void> main() async {
   );
 
   final chatRes2 = await OpenAI.instance.chat.create(
-    model: "gpt-3.5-turbo-0613",
+    model: "gpt-3.5-turbo",
     messages: [
       userMsg,
       assistantMsg1,
