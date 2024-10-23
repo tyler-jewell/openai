@@ -198,7 +198,7 @@ print(firstModel.permission); // ...
 Retrieves a single model by its id and gets additional pieces of information about it.
 
 ```dart
-OpenAIModelModel model = await OpenAI.instance.model.retrieve("text-davinci-003");
+OpenAIModelModel model = await OpenAI.instance.model.retrieve("gpt-3.5-turbo-instruct");
 
 print(model.ownedBy); // ...
 ```
@@ -230,7 +230,7 @@ Creates a predicted completion based on the provided `model`, `prompt` & other p
 
 ```dart
 OpenAICompletionModel completion = await OpenAI.instance.completion.create(
-  model: "text-davinci-003",
+  model: "gpt-3.5-turbo-instruct",
   prompt: "Dart is a program",
   maxTokens: 20,
   temperature: 0.5,
@@ -255,7 +255,7 @@ In addition to calling the `OpenAI.instance.completion.create()` which is a `Fut
 
 ```dart
 Stream<OpenAIStreamCompletionModel> completionStream = OpenAI.instance.completion.createStream(
-  model: "text-davinci-003",
+  model: "gpt-3.5-turbo-instruct",
   prompt: "Github is ",
   maxTokens: 100,
   temperature: 0.5,

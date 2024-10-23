@@ -81,7 +81,7 @@ interface class OpenAICompletion implements OpenAICompletionBase {
   /// Example:
   /// ```dart
   /// OpenAICompletionModel completion = await OpenAI.instance.completion.create(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Dart is a progr",
   ///  maxTokens: 20,
   ///  temperature: 0.5,
@@ -202,7 +202,7 @@ interface class OpenAICompletion implements OpenAICompletionBase {
   /// Example:
   /// ```dart
   /// Stream<OpenAIStreamCompletionModel> completionStream = OpenAI.instance.completion.createStream(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Github is ",
   ///  maxTokens: 100,
   ///  temperature: 0.5,
@@ -320,14 +320,14 @@ interface class OpenAICompletion implements OpenAICompletionBase {
   /// Example:
   /// ```dart
   /// OpenAICompletionModel completion = await OpenAI.instance.completion.create(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Dart is ",
   /// );
   /// ```
   /// Example:
   /// ```dart
   /// Stream<String> completionStream = OpenAI.instance.completion.createStreamText(
-  ///  model: "text-davinci-003",
+  ///  model: "gpt-3.5-turbo-instruct",
   ///  prompt: "Dart is ",
   /// );
   /// ```

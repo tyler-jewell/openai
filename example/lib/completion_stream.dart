@@ -9,7 +9,7 @@ void main() {
   // Creates A Stream Of Completions text.
   Stream<OpenAIStreamCompletionModel> stream =
       OpenAI.instance.completion.createStream(
-    model: "text-davinci-003",
+    model: "gpt-3.5-turbo-instruct",
     n: 1,
     prompt: ["hello"],
   );

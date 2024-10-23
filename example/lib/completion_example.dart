@@ -6,7 +6,7 @@ Future<void> main() async {
   OpenAI.apiKey = Env.apiKey;
 
   final completion = await OpenAI.instance.completion.create(
-    model: "text-davinci-003",
+    model: "gpt-3.5-turbo-instruct",
     prompt: "Dart is",
   );
 
@@ -14,7 +14,7 @@ Future<void> main() async {
 
   // // Creates The Completion
   // OpenAICompletionModel completion = await OpenAI.instance.completion.create(
-  //   model: "text-davinci-003",
+  //   model: "gpt-3.5-turbo-instruct",
   //   prompt: 'Flutter is ',
   //   maxTokens: 100,
   //   temperature: 0.8,

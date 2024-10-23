@@ -3,7 +3,7 @@ import 'package:dart_openai/dart_openai.dart';
 void main() async {
   Stream<OpenAIStreamCompletionModel> completionStream =
       OpenAI.instance.completion.createStream(
-    model: "text-davinci-003",
+    model: "gpt-3.5-turbo-instruct",
     prompt: "Github is ",
     maxTokens: 100,
     temperature: 0.5,

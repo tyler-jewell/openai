@@ -53,7 +53,7 @@ interface class OpenAIModel implements OpenAIModelBase {
   ///
   /// Example:
   /// ```dart
-  /// OpenAIModelModel model = await OpenAI.instance.model.retrieve("text-davinci-003");
+  /// OpenAIModelModel model = await OpenAI.instance.model.retrieve("gpt-3.5-turbo-instruct");
   /// print(model.id)
   /// ```
   @override
